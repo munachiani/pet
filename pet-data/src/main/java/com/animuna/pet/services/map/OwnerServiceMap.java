@@ -1,11 +1,12 @@
-package com.animuna.services.map;
+package com.animuna.pet.services.map;
 
-import com.animuna.model.Owner;
-import com.animuna.services.CrudService;
-import com.animuna.services.OwnerService;
+import com.animuna.pet.model.Owner;
+import com.animuna.pet.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

@@ -1,4 +1,4 @@
-package com.animuna.model;
+package com.animuna.pet.model;
 
 import java.time.LocalDate;
 

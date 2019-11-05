@@ -1,11 +1,9 @@
 package com.animuna.pet.bootstrap;
 
-import com.animuna.model.Owner;
-import com.animuna.model.Vet;
-import com.animuna.services.OwnerService;
-import com.animuna.services.VetService;
-import com.animuna.services.map.OwnerServiceMap;
-import com.animuna.services.map.VetServiceMap;
+import com.animuna.pet.model.Owner;
+import com.animuna.pet.model.Vet;
+import com.animuna.pet.services.OwnerService;
+import com.animuna.pet.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +14,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -31,7 +29,7 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(1L);
+        owner2.setId(2L);
         owner2.setFirstname("Nita");
         owner2.setLastname("Scott");
         ownerService.save(owner2);
@@ -45,7 +43,7 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet2.setId(1L);
+        vet2.setId(2L);
         vet2.setFirstname("Okonkwo");
         vet2.setLastname("Igbo");
         vetService.save(vet2);

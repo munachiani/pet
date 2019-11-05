@@ -1,4 +1,4 @@
-package com.animuna.services.map;
+package com.animuna.pet.services.map;
 
 import java.util.HashMap;
 import java.util.HashSet;

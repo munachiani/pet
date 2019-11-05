@@ -1,4 +1,4 @@
-package com.animuna.services;
+package com.animuna.pet.services;
 
 import org.springframework.data.repository.CrudRepository;
 

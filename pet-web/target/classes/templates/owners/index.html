@@ -5,6 +5,24 @@
     <title>Owners list</title>
 </head>
 <body>
+<!--/*@thymesVar id="owner" type="com.animuna.pet.model.Owner"*/-->
 <h1 th:text="'Owners Page'">Owners Page</h1>
+
+<table>
+    <th>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+    </th>
+    <tbody>
+        <tr th:each="owner : ${owners}">
+            <td th:text="${owner.id}">1</td>
+            <td th:text="${owner.firstname}">Muna</td>
+            <td th:text="${owner.lastname}">Ani</td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>

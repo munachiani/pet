@@ -1,8 +1,4 @@
-package com.animuna.model;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.animuna.pet.model;
 
 public class Person extends  BaseEntity{
 

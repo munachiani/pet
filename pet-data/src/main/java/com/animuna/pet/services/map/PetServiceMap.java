@@ -1,11 +1,12 @@
-package com.animuna.services.map;
+package com.animuna.pet.services.map;
 
-import com.animuna.model.Pet;
-import com.animuna.services.CrudService;
-import com.animuna.services.PetService;
+import com.animuna.pet.model.Pet;
+import com.animuna.pet.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
