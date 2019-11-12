@@ -5,11 +5,13 @@ import com.animuna.pet.model.Pet;
 import com.animuna.pet.services.OwnerService;
 import com.animuna.pet.services.PetService;
 import com.animuna.pet.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
@@ -65,8 +67,14 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
         return super.findById(id);
     }
 
+
+
     @Override
-    public Owner findByName(String firstName) {
-        return null;
+    public Owner findByLastname(String lastName) {
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastname().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 }

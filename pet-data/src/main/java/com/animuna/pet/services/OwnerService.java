@@ -4,6 +4,6 @@ import com.animuna.pet.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 
-    Owner findByName(String firstName);
+    Owner findByLastname(String firstName);
 
 }

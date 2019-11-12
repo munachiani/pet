@@ -2,11 +2,13 @@ package com.animuna.pet.services.map;
 
 import com.animuna.pet.model.Specialty;
 import com.animuna.pet.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
