@@ -1,6 +1,8 @@
 com/animuna/pet/bootstrap/DataLoader.class
 com/animuna/pet/controllers/VetController.class
 com/animuna/pet/controllers/PetController.class
+com/animuna/pet/controllers/VisitController.class
+com/animuna/pet/controllers/SpecialtyController.class
 com/animuna/pet/controllers/IndexController.class
 com/animuna/pet/PetApplication.class
 com/animuna/pet/controllers/OwnerController.class
